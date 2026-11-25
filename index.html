@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<title>Edizio Sousa | Serviços Digitais</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2d;--panel2:#10233a;--blue:#1677e8;--cyan:#57b8ff;--text:#f4f7fb;--muted:#a9b8ca;--line:#203650;--gold:#e6bd68}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(150deg,#07111f,#0a1728 55%,#07111f);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
+header{border-bottom:1px solid var(--line);background:#07111feF;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.wrap{width:min(1100px,92%);margin:auto}.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;padding:12px 0}.top>.menu-toggle{justify-self:start}.top>.brand{justify-self:center}.top>.admin-btn{justify-self:end}.menu-toggle{width:43px;height:42px;border:1px solid #315170;background:#10243a;color:var(--text);border-radius:11px;font-size:23px;cursor:pointer}.site-menu{display:none;border-top:1px solid var(--line);background:#091727}.site-menu.open{display:block}.site-menu .wrap{padding:12px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.menu-link{display:block;padding:10px 12px;border:1px solid #203650;border-radius:10px;color:#dcecff;text-decoration:none;background:#0d1b2d;font-size:14px}.menu-link:hover{border-color:var(--cyan);background:#112944}.brand{font-weight:850;letter-spacing:.4px;font-size:17px;display:flex;align-items:center;gap:8px;white-space:nowrap}.brand,.brand span{color:#fff}.brand-logo{width:40px;height:34px;object-fit:contain;object-position:center;display:block;flex:0 0 auto;overflow:visible}.admin-btn,.btn{border:1px solid #315170;background:#10243a;color:var(--text);padding:9px 10px;border-radius:11px;font-weight:700;font-size:13px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}.btn.primary{background:linear-gradient(135deg,#1479ed,#0756b7);border-color:#2788f2}.btn:hover,.admin-btn:hover{filter:brightness(1.15)}
+.hero{padding:62px 0 25px;display:grid;grid-template-columns:1fr;gap:0;align-items:center}.hero .eyebrow{text-align:center;color:#ffffff;font-size:15px}.eyebrow{color:var(--cyan);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.04;margin:12px 0 18px;letter-spacing:-1.8px}.hero h1 span{color:var(--cyan)}.hero p{color:var(--muted);max-width:760px;font-size:17px;text-align:center;margin-left:auto;margin-right:auto}.hero p span{display:block}.hero p span+span{margin-top:12px}.hero-card{border:1px solid #25415f;background:linear-gradient(145deg,#102844,#0b192a);padding:26px;border-radius:22px;box-shadow:0 20px 60px #0005}.hero-card .symbol{font-size:42px}.hero-card h3{margin:8px 0}.hero-card p{font-size:14px}
+section{padding:25px 0 45px}.section-head{display:flex;justify-content:center;align-items:center;text-align:center;gap:15px;margin-bottom:24px}.section-head>div{width:100%;text-align:center}.section-head h2{display:none;font-size:34px;margin:8px 0 0;text-align:center}.section-head .eyebrow{font-size:14px;letter-spacing:2px;text-align:center}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service-item{min-width:0;background:transparent;border:0;padding:0;margin:0}.service-image-title{display:block;width:100%;color:#fff;text-align:center;font-weight:800;font-size:18px;line-height:1.35;margin:0 0 12px;padding:0;background:transparent;border:0}.service-image{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;margin-bottom:14px;background:#071321}.service{background:linear-gradient(160deg,#10233a,#0b192a);border:1px solid var(--line);border-radius:17px;padding:20px;display:flex;flex-direction:column;min-height:210px}.service-image{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;margin-bottom:14px;background:#071321}.tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--cyan);font-weight:800}.service h3{margin:9px 0 7px;font-size:19px}.service p{color:var(--muted);font-size:14px;margin:0 0 18px;flex:1}.price{font-size:19px;font-weight:850;color:var(--gold);margin-bottom:14px}.empty{color:var(--muted);border:1px dashed #34506d;border-radius:15px;padding:24px;text-align:center;grid-column:1/-1}
+.contact{margin:15px 0 55px;padding:28px;border:1px solid #25415f;border-radius:20px;background:linear-gradient(120deg,#102b49,#0d1b2d);display:flex;justify-content:center;align-items:center;gap:20px;text-align:center}.contact h2{margin:0 0 5px}.contact p{color:var(--muted);margin:0}
+ .social-links{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:0 auto 18px}.social-caption{text-align:center;color:var(--muted);font-size:15px;margin:0 auto 28px;padding:0 12px;position:relative;top:32px}.social-links a{width:46px;height:46px;border:1px solid #315170;background:#10243a;padding:9px;border-radius:11px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:transform .15s,filter .15s}.social-links a img{display:block;width:25px;height:25px;object-fit:contain}.social-links a:hover{border-color:var(--cyan);filter:brightness(1.2);transform:translateY(-2px)}footer{border-top:1px solid var(--line);padding:22px 0;color:#8fa2b8;font-size:13px;text-align:center}
+.modal{position:fixed;inset:0;background:#020812d9;display:none;align-items:center;justify-content:center;padding:18px;z-index:20}.modal.show{display:flex}.dialog{width:min(680px,100%);max-height:90vh;overflow:auto;background:#0c1a2b;border:1px solid #2a4664;border-radius:18px;padding:22px;box-shadow:0 25px 80px #0009}.dialog h2{margin:0 0 8px}.muted{color:var(--muted);font-size:13px}.field{display:grid;gap:6px;margin:13px 0}.field label{font-size:13px;color:#c8d5e3;font-weight:700}.field input,.field textarea,.field select{width:100%;background:#071321;border:1px solid #29425e;color:white;border-radius:10px;padding:11px;font:inherit}.field textarea{min-height:85px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.danger{border-color:#78404a;color:#ffb6bf}.admin-list{display:grid;gap:10px;margin-top:15px}.admin-item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px;background:#10243a;border:1px solid var(--line);border-radius:12px}.admin-item small{display:block;color:var(--muted)}.tiny{font-size:12px;color:#8fa2b8;margin-top:12px}
+@media(max-width:760px){.site-menu .wrap{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr;padding-top:42px}.grid{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}.top{padding:10px 0;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.top>.menu-toggle{justify-self:start}.top>.brand{justify-self:center}.top>.admin-btn{justify-self:end}.brand{font-size:16px;gap:5px}.brand-logo{width:34px;height:29px}.admin-btn{font-size:12px;padding:8px 8px;white-space:nowrap}.menu-toggle{width:40px;height:40px}}
+</style>
+</head>
+<body>
+<header><div class="wrap top"><button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">☰</button><div class="brand"><img class="brand-logo" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%2080%22%3E%0A%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%0A%20%20%3Crect%20x%3D%2215%22%20y%3D%228%22%20width%3D%2270%22%20height%3D%2249%22%20rx%3D%225%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M8%2067h84l-7%207H15z%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M43%2069h14%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E" alt="Logotipo branco de notebook"><span class="brand-name">EDIZIO SOUSA</span></div><button class="admin-btn" onclick="openAdmin()">⚙ Administrador</button></div>
+ <nav class="site-menu" id="siteMenu" aria-label="Menu de serviços"><div class="wrap" id="menuLinks"></div></nav></header>
+<main class="wrap">
+  <div class="hero">
+    <div><div class="eyebrow" id="heroEyebrow">Soluções digitais</div><h1 id="heroTitle">Seu projeto.<br><span>Mais profissional.</span></h1><p id="heroText">Serviços digitais para organizar, divulgar e facilitar o seu trabalho. Conheça as opções e fale comigo para solicitar um atendimento.</p></div>
+  </div>
+  <div class="social-links" id="socialLinks"></div><p class="social-caption" id="socialCaption">Explore as 8 categorias e descubra nossas soluções digitais.</p>
+  <section id="servicos"><div class="section-head"><div><h2 id="catalogTitle">Catálogo</h2></div></div><div class="grid" id="serviceGrid"></div></section>
+</main>
+<footer><div class="wrap"><span id="footerCopyright">© <span id="year"></span> Edizio Sousa · Serviços Digitais</span></div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+ <div class="dialog" id="dialog"></div>
+</div>
+<script>
+const WA_NUMBER = "5521965768272";
+const defaults = [
+ {id:1,name:"Planilhas Excel personalizadas",category:"Planilhas e organização",description:"Desenvolvimento de planilhas para controle financeiro, vendas, despesas, cadastro de clientes e gestão.",price:"A partir de R$ 15,00"},
+ {id:2,name:"Controle de estoque em Excel",category:"Planilhas e organização",description:"Planilha para registrar produtos, entradas, saídas e acompanhar o estoque.",price:"Consulte o valor"},
+ {id:3,name:"Relatórios, gráficos e painéis",category:"Planilhas e organização",description:"Organização de dados em relatórios visuais e painéis para facilitar a análise.",price:"Consulte o valor"},
+ {id:4,name:"Formulários Google personalizados",category:"Comunicação e gestão digital",description:"Criação de formulários para inscrições, cadastros, pesquisas e solicitações.",price:"Consulte o valor"},
+ {id:5,name:"Organização profissional no Google Drive",category:"Comunicação e gestão digital",description:"Estruturação de pastas e arquivos para manter documentos organizados.",price:"Consulte o valor"},
+ {id:6,name:"Divulgação em canais do Telegram",category:"Divulgação digital",description:"Divulgação de publicações em canais do Telegram, conforme disponibilidade e pacote.",price:"A partir de R$ 15,00"}
+];
+let services = load("es_services", defaults);
+let editingImage = "";
+let siteSettings = load("es_site_settings", {
+ eyebrow:"Soluções digitais",
+ title:"Seu projeto.\\nMais profissional.",
+ text:"Designer Digital Autônomo — Serviços Digitais Independentes.\nOrganizo e profissionalizo sua presença digital",
+ footerTitle:"Precisa de um serviço personalizado?",
+ footerText:"Envie uma mensagem e explique o que você precisa.",
+ footerCopyright:"Edizio Sousa · Serviços Digitais",
+ catalogTitle:"Catálogo",
+ whatsapp:WA_NUMBER
+});
+siteSettings=Object.assign({catalogTitle:"Catálogo",instagram:"",socialWhatsapp:"",pinterest:"",linkedin:"",telegram:"",socialCaption:"Explore as 8 categorias e descubra nossas soluções digitais."},siteSettings);
+// Corrige a quebra de linha e separa visualmente as duas frases.
+if(siteSettings.text){
+  siteSettings.text = siteSettings.text
+    .replace(/\\n/g, "\n")
+    .replace(/\\nOrganizo e profissionalizo sua presença digital/g, "\nOrganizo e profissionalizo sua presença digital");
+  if(siteSettings.text.includes("Designer Digital Autônomo") && !siteSettings.text.includes("Organizo e profissionalizo sua presença digital")){
+    siteSettings.text = siteSettings.text.trim() + "\nOrganizo e profissionalizo sua presença digital";
+  }
+  localStorage.setItem("es_site_settings", JSON.stringify(siteSettings));
+}
+
+// Migra links antigos para os novos nomes, sem confundir com o número principal do WhatsApp.
+if(!siteSettings.socialWhatsapp && siteSettings.facebook)siteSettings.socialWhatsapp=siteSettings.facebook;
+if(!siteSettings.pinterest && siteSettings.youtube)siteSettings.pinterest=siteSettings.youtube;
+if(!siteSettings.linkedin && siteSettings.tiktok)siteSettings.linkedin=siteSettings.tiktok;
+if(siteSettings.catalogTitle==="Serviços disponíveis")siteSettings.catalogTitle="Catálogo";
+function load(k,f){try{return JSON.parse(localStorage.getItem(k)) ?? f}catch(e){return f}}
+async function save(){
+ localStorage.setItem("es_services",JSON.stringify(services));
+ if(adminPassword) await syncCloud();
+}
+let adminPassword="";
+let cloudAvailable=false;
+async function syncCloud(){
+ try{
+  const response=await fetch("/.netlify/functions/site-data",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({password:adminPassword,services,siteSettings})});
+  if(!response.ok) throw new Error("Não foi possível salvar na nuvem.");
+  cloudAvailable=true;
+  return true;
+ }catch(error){alert("Não foi possível sincronizar com o Netlify. Verifique a conexão e tente novamente. Suas alterações continuam salvas neste navegador.");return false}
+}
+async function loadCloud(){
+ try{
+  const response=await fetch("/.netlify/functions/site-data");
+  if(!response.ok) return;
+  const data=await response.json();
+  if(Array.isArray(data.services)){
+   services=data.services;
+   localStorage.setItem("es_services",JSON.stringify(services));
+  }
+  if(data.siteSettings && typeof data.siteSettings==="object"){
+   siteSettings=Object.assign(siteSettings,data.siteSettings);
+   localStorage.setItem("es_site_settings",JSON.stringify(siteSettings));
+  }
+  cloudAvailable=true;
+ }catch(error){console.warn("Dados online indisponíveis; usando dados locais.")}
+}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function wa(text){const phone=String(siteSettings.whatsapp||WA_NUMBER).replace(/\D/g,"");return "https://wa.me/"+phone+"?text="+encodeURIComponent(text)}
+
+function renderMenu(){
+ const holder=document.getElementById("menuLinks");
+ if(!holder)return;
+ holder.innerHTML=services.length?services.map(s=>`<a class="menu-link" href="#service-${s.id}" onclick="closeMenu()">${esc(s.name)}</a>`).join(""):'';
+}
+function toggleMenu(){
+ const menu=document.getElementById("siteMenu"),btn=document.getElementById("menuToggle");
+ const open=!menu.classList.contains("open");
+ menu.classList.toggle("open",open);btn.setAttribute("aria-expanded",String(open));btn.setAttribute("aria-label",open?"Fechar menu":"Abrir menu");btn.textContent=open?"✕":"☰";
+}
+function closeMenu(){
+ const menu=document.getElementById("siteMenu"),btn=document.getElementById("menuToggle");
+ menu.classList.remove("open");btn.setAttribute("aria-expanded","false");btn.setAttribute("aria-label","Abrir menu");btn.textContent="☰";
+}
+
+function applySiteSettings(){
+ document.getElementById("heroEyebrow").textContent=siteSettings.eyebrow;
+ document.getElementById("heroTitle").innerHTML=esc(siteSettings.title??"").replace(/\\n/g,"<br>");
+ document.getElementById("heroTitle").style.display=String(siteSettings.title??"").trim()?"":"none";
+ document.getElementById("heroText").innerHTML=esc(siteSettings.text.replace(/\\n/g,"\n")).split(/\n+/).map(t=>t.trim()).filter(Boolean).map(t=>"<span>"+t+"</span>").join("");
+ document.getElementById("catalogTitle").textContent=siteSettings.catalogTitle||"Catálogo";
+  document.getElementById("socialCaption").textContent=siteSettings.socialCaption||"";
+ document.getElementById("footerCopyright").textContent="© "+new Date().getFullYear()+" "+siteSettings.footerCopyright;
+ const socialNames={socialWhatsapp:"WhatsApp",instagram:"Instagram",telegram:"Telegram",pinterest:"Pinterest",linkedin:"LinkedIn"};
+ const social=document.getElementById("socialLinks");
+ const socialIcons={socialWhatsapp:["WhatsApp","whatsapp","FFFFFF"],instagram:["Instagram","instagram","FFFFFF"],telegram:["Telegram","telegram","FFFFFF"],pinterest:["Pinterest","pinterest","FFFFFF"],linkedin:["LinkedIn","linkedin","FFFFFF"]};
+ social.innerHTML=Object.entries(socialIcons).filter(([k])=>siteSettings[k]&&siteSettings[k].trim()).map(([k,v])=>`<a href="${esc(siteSettings[k])}" target="_blank" rel="noopener noreferrer" aria-label="${v[0]}" title="${v[0]}"><img src="https://cdn.simpleicons.org/${v[1]}/${v[2]}" alt="${v[0]}"></a>`).join("");
+}
+function render(){
+ const grid=document.getElementById("serviceGrid");
+ grid.innerHTML=services.length?services.map(s=>`<div class="service-item">${s.imageTitle?`<div class="service-image-title">${esc(s.imageTitle)}</div>`:``}<article class="service" id="service-${s.id}">${s.image?`<img class="service-image" src="${s.image}" alt="Imagem de ${esc(s.name)}">`:``}<div class="tag">${esc(s.category)}</div><h3>${esc(s.name)}</h3><p>${esc(s.description)}</p><div class="price">${esc(s.price)}</div><a class="btn" href="${wa("Olá! Tenho interesse no serviço: "+s.name+". Poderia me passar mais informações?")}" target="_blank" rel="noopener">Solicitar serviço ↗</a></article></div>`).join(""):``;
+ renderMenu();
+ applySiteSettings();
+}
+document.getElementById("year").textContent=new Date().getFullYear();loadCloud().finally(()=>{render();renderMenu()});
+
+const modal=document.getElementById("modal"),dialog=document.getElementById("dialog");
+function show(html){dialog.innerHTML=html;modal.classList.add("show")}
+function closeModal(){modal.classList.remove("show")}
+modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
+function openAdmin(){
+ show(`<h2>Área administrativa</h2><p class="muted">Digite a senha configurada nas variáveis de ambiente do Netlify.</p>
+ <div class="field"><label>Senha de administrador</label><input id="pin" type="password" autocomplete="current-password" placeholder="Digite sua senha"></div>
+ <div class="actions"><button class="btn primary" onclick="authenticate()">Entrar</button><button class="btn" onclick="closeModal()">Cancelar</button></div>
+ <p class="tiny">A senha é validada no servidor e não fica gravada no navegador.</p>`);
+}
+async function authenticate(){
+ const p=document.getElementById("pin").value;
+ if(!p){alert("Digite a senha.");return}
+ try{
+  const response=await fetch("/.netlify/functions/site-data",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"auth",password:p})});
+  if(!response.ok){alert("Senha incorreta ou configuração incompleta no Netlify.");return}
+  adminPassword=p;adminPanel();
+ }catch(error){alert("Não foi possível validar a senha. Verifique se o site foi publicado no Netlify.")}
+}
+
+function adminPanel(){
+ show(`<h2>Configurações da vitrine</h2><p class="muted">Gerencie os serviços que aparecem para os visitantes. ${services.length}/100 serviços cadastrados.</p>
+ <div class="actions"><button class="btn primary" onclick="editSiteSettings()">Editar título, textos e WhatsApp</button><button class="btn primary" onclick="exportPublicSite()">Abrir vitrine pública</button><button class="btn primary" onclick="editService()" ${services.length>=100?"disabled":""}>＋ Adicionar serviço</button><button class="btn" onclick="exportData()">Exportar cópia</button><button class="btn" onclick="document.getElementById('importFile').click()">Importar cópia</button><input id="importFile" type="file" accept="application/json" hidden onchange="importData(event)"></div>
+ <p class="muted">Use as setas para mudar a posição dos serviços. A ordem será mantida na vitrine dos clientes quando você gerar o arquivo público.</p>
+ <div class="admin-list">${services.map((s,index)=>`<div class="admin-item"><div><strong>${index+1}. ${esc(s.name)}</strong><small>${esc(s.price)}</small></div><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn" onclick="moveService(${index},-1)" ${index===0?"disabled":""} aria-label="Mover para cima">↑</button><button class="btn" onclick="moveService(${index},1)" ${index===services.length-1?"disabled":""} aria-label="Mover para baixo">↓</button><button class="btn" onclick="editService(${s.id})">Editar</button><button class="btn danger" onclick="deleteService(${s.id})">Excluir</button></div></div>`).join("")||'<p class="muted">Nenhum serviço cadastrado.</p>'}</div>
+ <div class="actions"><button class="btn" onclick="showPasswordHelp()">Configurar senha</button><button class="btn" onclick="closeModal()">Fechar</button></div>
+ <p class="tiny">As alterações são salvas neste navegador. Para levar a vitrine atualizada para outro aparelho, exporte uma cópia e importe-a no outro navegador.</p>`);
+}
+
+
+function exportPublicSite(){
+ window.open("/", "_blank", "noopener");
+}
+
+function editSiteSettings(){
+ show(`<h2>Editar página inicial e rodapé</h2><p class="muted">Altere os textos que aparecem na abertura do site e os dados de contato.</p>
+ <div class="field"><label>Texto pequeno acima do título</label><input id="se" value="${esc(siteSettings.eyebrow)}"></div>
+ <div class="field"><label>Frase principal exibida na área do cliente</label><textarea id="st" placeholder="Digite a frase principal. Deixe vazio para não exibir título.">${esc(siteSettings.title??"")}</textarea><small class="muted">Este é o texto grande que aparece como “Seu projeto. Mais profissional.” na página do cliente. Você pode alterar ou apagar.</small><button type="button" class="btn" onclick="document.getElementById('st').value=''">Apagar frase</button></div>
+ <div class="field"><label>Texto abaixo dos logotipos das redes sociais</label><textarea id="ssc">${esc(siteSettings.socialCaption||"")}</textarea></div>
+  <div class="field"><label>Texto abaixo do título</label><textarea id="sx">${esc(siteSettings.text)}</textarea></div>
+ <hr style="border:0;border-top:1px solid #29425e;width:100%;margin:12px 0">
+ <h3>Área dos serviços</h3>
+ <div class="field"><label>Título do catálogo</label><input id="sct" value="${esc(siteSettings.catalogTitle||"Catálogo")}"></div>
+ <hr style="border:0;border-top:1px solid #29425e;width:100%;margin:12px 0">
+ <div class="field"><label>Título do rodapé / contato</label><input id="sft" value="${esc(siteSettings.footerTitle)}"></div>
+ <div class="field"><label>Texto abaixo do título do rodapé</label><textarea id="sfx">${esc(siteSettings.footerText)}</textarea></div>
+ <div class="field"><label>Texto de identificação no rodapé</label><input id="sfc" value="${esc(siteSettings.footerCopyright)}"></div>
+ <div class="field"><label>Número do WhatsApp (com DDI e DDD, somente números)</label><input id="sw" inputmode="numeric" value="${esc(siteSettings.whatsapp)}" placeholder="5511999999999"></div>
+ <hr style="border:0;border-top:1px solid #29425e;width:100%;margin:12px 0">
+ <h3>Redes sociais</h3><p class="muted">Cole o link completo de cada perfil. Os botões aparecerão na vitrine pública somente para as redes que você preencher.</p>
+ <div class="field"><label>Instagram</label><input id="si" type="url" value="${esc(siteSettings.instagram||"")}" placeholder="https://www.instagram.com/seuperfil/"></div>
+ <div class="field"><label>WhatsApp</label><input id="swa" type="url" value="${esc(siteSettings.socialWhatsapp||"")}" placeholder="https://wa.me/5511999999999"></div>
+ <div class="field"><label>Pinterest</label><input id="spin" type="url" value="${esc(siteSettings.pinterest||"")}" placeholder="https://www.pinterest.com/seuperfil/"></div>
+ <div class="field"><label>LinkedIn</label><input id="sli" type="url" value="${esc(siteSettings.linkedin||"")}" placeholder="https://www.linkedin.com/in/seuperfil/"></div>
+ <div class="field"><label>Telegram</label><input id="stg" type="url" value="${esc(siteSettings.telegram||"")}" placeholder="https://t.me/seucanal"></div>
+ <div class="actions"><button class="btn primary" onclick="saveSiteSettings()">Salvar alterações</button><button class="btn" onclick="adminPanel()">Cancelar</button></div>`);
+}
+async function saveSiteSettings(){
+ const phone=document.getElementById("sw").value.replace(/\D/g,"");
+ if(phone.length<10){alert("Informe o WhatsApp com código do país e DDD. Exemplo: 5511999999999");return}
+ siteSettings={
+  eyebrow:document.getElementById("se").value.trim(),
+  title:document.getElementById("st").value.trim(),
+  text:document.getElementById("sx").value.trim(),
+   socialCaption:document.getElementById("ssc").value.trim(),
+  catalogTitle:document.getElementById("sct").value.trim(),
+  footerTitle:document.getElementById("sft").value.trim(),
+  footerText:document.getElementById("sfx").value.trim(),
+  footerCopyright:document.getElementById("sfc").value.trim(),
+  whatsapp:phone,
+  socialWhatsapp:document.getElementById("swa").value.trim(),
+  instagram:document.getElementById("si").value.trim(),
+  telegram:document.getElementById("stg").value.trim(),
+  pinterest:document.getElementById("spin").value.trim(),
+  linkedin:document.getElementById("sli").value.trim()
+ };
+ localStorage.setItem("es_site_settings",JSON.stringify(siteSettings));
+ const ok=await syncCloud();render();adminPanel();alert(ok?"Alterações publicadas para todos os visitantes!":"Alterações salvas apenas neste navegador; a sincronização falhou.");
+}
+
+function editService(id){
+ const s=services.find(x=>x.id===id)||{id:Date.now(),name:"",category:"",description:"",price:"Consulte o valor",image:"",imageTitle:""};
+ if(!id && services.length>=100){alert("Você atingiu o limite de 100 serviços.");return}
+ editingImage=s.image||"";
+ show(`<h2>${id?"Editar serviço":"Novo serviço"}</h2>
+ <div class="field"><label>Nome do serviço</label><input id="sn" value="${esc(s.name)}"></div>
+ <div class="field"><label>Categoria</label><input id="sc" value="${esc(s.category)}"></div>
+ <div class="field"><label>Descrição</label><textarea id="sd">${esc(s.description)}</textarea></div>
+ <div class="field"><label>Preço ou condição</label><input id="sp" value="${esc(s.price)}"></div>
+ <div class="field"><label>Título acima da foto (opcional)</label><input id="sit" value="${esc(s.imageTitle||"")}" placeholder="Digite o título que aparecerá acima da foto"></div>
+  <div class="field"><label>Imagem do serviço (quadrada, 1080 × 1080)</label><input id="serviceImageFile" type="file" accept="image/*" onchange="loadServiceImage(event)"><small class="muted">Selecione uma foto. Ela será ajustada automaticamente para 1080 × 1080 pixels.</small><img id="serviceImagePreview" src="${editingImage}" style="${editingImage?"display:block":"display:none"};width:180px;max-width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;margin-top:8px"><button type="button" class="btn" onclick="removeServiceImage()">Remover imagem</button></div>
+ <div class="actions"><button class="btn primary" onclick="saveService(${s.id})">Salvar serviço</button><button class="btn" onclick="adminPanel()">Cancelar</button></div>`);
+}
+function loadServiceImage(event){
+ const file=event.target.files&&event.target.files[0];if(!file)return;
+ if(!file.type.startsWith("image/")){alert("Selecione um arquivo de imagem.");return}
+ const reader=new FileReader();reader.onload=()=>{const img=new Image();img.onload=()=>{const canvas=document.createElement("canvas");canvas.width=1080;canvas.height=1080;const ctx=canvas.getContext("2d");const side=Math.min(img.width,img.height);const sx=(img.width-side)/2,sy=(img.height-side)/2;ctx.drawImage(img,sx,sy,side,side,0,0,1080,1080);editingImage=canvas.toDataURL("image/jpeg",0.88);const preview=document.getElementById("serviceImagePreview");preview.src=editingImage;preview.style.display="block"};img.src=reader.result};reader.readAsDataURL(file);
+}
+function removeServiceImage(){editingImage="";const preview=document.getElementById("serviceImagePreview");if(preview){preview.removeAttribute("src");preview.style.display="none"}const input=document.getElementById("serviceImageFile");if(input)input.value=""}
+async function saveService(id){
+ const name=document.getElementById("sn").value.trim();
+ if(!name){alert("Informe o nome do serviço.");return}
+ const i=services.findIndex(x=>x.id===id);
+ if(i<0 && services.length>=100){alert("Limite atingido: são permitidos no máximo 100 serviços.");return}
+ const item={id,name,category:document.getElementById("sc").value.trim()||"Serviços digitais",description:document.getElementById("sd").value.trim(),price:document.getElementById("sp").value.trim()||"Consulte o valor",image:editingImage,imageTitle:document.getElementById("sit").value.trim()};
+ if(i>=0)services[i]=item;else services.push(item);
+ await await save();render();adminPanel();
+}
+async function moveService(index,direction){
+ const target=index+direction;
+ if(target<0||target>=services.length)return;
+ const item=services[index];services[index]=services[target];services[target]=item;
+ save();render();adminPanel();
+}
+async function deleteService(id){if(confirm("Deseja excluir este serviço?")){services=services.filter(s=>s.id!==id);await save();render();adminPanel()}}
+function showPasswordHelp(){show(`<h2>Senha de administrador</h2><p class="muted">A senha é controlada pelo Netlify para proteger o painel. Para alterá-la, abra as configurações do seu site no Netlify, entre em Environment variables e edite ADMIN_PASSWORD. Depois, publique novamente ou aguarde a atualização da função.</p><div class="actions"><button class="btn" onclick="adminPanel()">Voltar</button></div>`)}
+function changePin(){
+ show(`<h2>Alterar senha</h2><div class="field"><label>Senha atual</label><input id="oldpin" type="password"></div><div class="field"><label>Nova senha</label><input id="newpin" type="password"></div><div class="field"><label>Confirmar nova senha</label><input id="newpin2" type="password"></div><div class="actions"><button class="btn primary" onclick="savePin()">Salvar senha</button><button class="btn" onclick="adminPanel()">Voltar</button></div>`);
+}
+function savePin(){const a=document.getElementById("oldpin").value,b=document.getElementById("newpin").value,c=document.getElementById("newpin2").value;if(a!==localStorage.getItem("es_admin_pin")){alert("Senha atual incorreta.");return}if(b.length<4||b!==c){alert("A nova senha deve ter pelo menos 4 caracteres e coincidir na confirmação.");return}localStorage.setItem("es_admin_pin",b);alert("Senha alterada neste navegador.");adminPanel()}
+function exportData(){const blob=new Blob([JSON.stringify({services,siteSettings},null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="edizio-sousa-vitrine-backup.json";a.click();URL.revokeObjectURL(a.href)}
+function importData(e){const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=async()=>{try{const d=JSON.parse(r.result);if(!Array.isArray(d.services))throw 0;services=d.services;if(d.siteSettings){siteSettings=d.siteSettings;localStorage.setItem("es_site_settings",JSON.stringify(siteSettings))}await save();render();adminPanel();alert("Cópia importada.")}catch(err){alert("Arquivo inválido.")}};r.readAsText(file)}
+</script>
+</body></html>
